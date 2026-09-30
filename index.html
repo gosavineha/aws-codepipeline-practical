@@ -1,10 +1,174 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CodePipeline Practical</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS CodePipeline Practical</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #ff9900;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+
+        .status {
+            background: rgba(0, 255, 100, 0.15);
+            border: 1px solid #00ff66;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .status span {
+            color: #00ff66;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #ff9900;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #e68a00;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            min-height: 25px;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 25px;
+            color: #ff9900;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello from AWS CodePipeline!</h1>
-    <p>My GitHub repository is connected to AWS CodePipeline.</p>
+
+    <div class="container">
+
+        <h1>🚀 <span class="highlight">AWS CodePipeline</span></h1>
+
+        <p>
+            Welcome to my CI/CD practical project!
+        </p>
+
+        <div class="status">
+            Pipeline Status:
+            <span>● Connected</span>
+        </div>
+
+        <div class="pipeline">
+            <div class="step">🐙 GitHub</div>
+            <div class="arrow">→</div>
+            <div class="step">⚙️ CodePipeline</div>
+            <div class="arrow">→</div>
+            <div class="step">🚀 Deployment</div>
+        </div>
+
+        <button onclick="showMessage()">
+            Check Pipeline
+        </button>
+
+        <button onclick="changeMessage()">
+            Test Deployment
+        </button>
+
+        <div id="message"></div>
+
+        <footer>
+            Built for AWS CodePipeline Practical | CI/CD Project
+        </footer>
+
+    </div>
+
+    <script>
+
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+                "✅ Pipeline is working successfully!";
+        }
+
+        function changeMessage() {
+            document.getElementById("message").innerHTML =
+                "🚀 New version deployed successfully!";
+        }
+
+    </script>
+
 </body>
 </html>
+```
